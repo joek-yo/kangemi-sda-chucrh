@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import logo from "../assets/Logo SDA.png";
 
 const Navbar = () => {
   // State for toggling mobile menu
@@ -10,9 +11,11 @@ const Navbar = () => {
   return (
     <nav className="bg-blue-900 text-white p-4">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
+        
         {/* Church Logo */}
-        <Link to="/" className="text-2xl font-bold">
-          SDA Kangemi
+        <Link to="/" className="flex items-center gap-2">
+        <img src={logo} alt="SDA Logo" className="h-10 w-auto" /> 
+        <span className="text-2xl font-bold">SDA Kangemi</span>
         </Link>
 
         {/* Desktop Menu */}

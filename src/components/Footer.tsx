@@ -1,12 +1,19 @@
-// 📌 File: src/components/Footer.tsx
-
 import { Link } from "react-router-dom";
+import logo from "../assets/Logo SDA.png"; 
 
 const Footer = () => {
   return (
     <footer className="bg-blue-900 text-white p-6 text-center">
-      <p className="text-lg font-semibold">Seventh-day Adventist Church, Kangemi</p>
-      <p className="text-sm">© {new Date().getFullYear()} All Rights Reserved.</p>
+      {/* Church Logo and Name */}
+      <div className="flex flex-col items-center">
+        <Link to="/">
+          <img src={logo} alt="SDA Logo" className="h-12 w-auto mb-2 hover:opacity-80 transition-opacity duration-200" />
+        </Link>
+        <p className="text-lg font-semibold">Seventh-day Adventist Church, Kangemi</p>
+      </div>
+
+      {/* Copyright */}
+      <p className="text-sm mt-2">© {new Date().getFullYear()} All Rights Reserved.</p>
 
       {/* Social Media Links */}
       <div className="flex justify-center space-x-6 mt-3">
